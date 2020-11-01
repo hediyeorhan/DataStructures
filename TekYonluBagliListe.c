@@ -178,7 +178,7 @@ int main()
         case 0:
             exit(0);
         default:
-            printf("Geçersiz islem!");
+            printf("GeÃ§ersiz islem!");
             break;
 
         }
