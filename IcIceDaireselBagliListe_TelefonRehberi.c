@@ -21,8 +21,8 @@ typedef struct rehber
 Telefon *iter_tel, *tela;
 Rehber *ekle(Rehber *ll)
 {
-    int tel_sayi;
-    int i=0;
+    
+   
 
     if(ll == NULL)
     {
@@ -194,9 +194,7 @@ void AraAd(Rehber *ll)
 void AraNumara(Rehber *ll)
 {
     char aranantel[11];
-    int tel_sayi;
-
-
+ 
     printf("\nAranacak telefon numarasini giriniz : ");
     fflush(stdin);
     gets(aranantel);
