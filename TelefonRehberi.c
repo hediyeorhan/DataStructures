@@ -63,6 +63,98 @@ void Listele(Bliste *ll)
     printf("\nSoyad : %s", iter->soyad);
 }
 
+Bliste *NumaraDegistirme(Bliste *ll)
+{
+    char degisecektel[15], yenitel[15];
+    printf("\nDegisecek telefon numarasini  giriniz : ");
+    fflush(stdin);
+    scanf("%s", &degisecektel);
+    printf("\nYeni telefon numarasini giriniz : ");
+    fflush(stdin);
+    scanf("%s", &yenitel);
+
+    int uz = strlen(degisecektel);
+    int kelimeuz = 0;
+
+    if(ll == NULL)
+    {
+        return NULL;
+    }
+
+    else if(ll->next == ll)
+    {
+        for(int i=0; i<uz; i++)
+        {
+            if(ll->tel[i] == degisecektel[i])
+            {
+                kelimeuz++;
+
+            }
+        }
+        if(kelimeuz == uz)
+        {
+            for(int i=0; i<uz; i++)
+            {
+                ll->tel[i] = yenitel[i];
+            }
+
+            return ll;
+
+        }
+    }
+    else
+    {
+        Bliste *iter = ll;
+        while(iter->next != ll)
+        {
+            kelimeuz = 0;
+            for(int i=0; i<uz; i++)
+            {
+                if(iter->next->tel[i] == degisecektel[i])
+                {
+                    kelimeuz++;
+
+                }
+
+            }
+            if(kelimeuz == uz)
+            {
+                for(int i=0; i<uz; i++)
+            {
+                iter->next->tel[i] = yenitel[i];
+            }
+
+                return iter->next->tel;
+            }
+
+
+            iter = iter->next;
+
+
+        }
+        kelimeuz = 0;
+        for(int i=0; i<uz; i++)
+        {
+
+            if(iter->next->tel[i] == degisecektel[i])
+            {
+                kelimeuz++;
+
+            }
+
+        }
+        if(kelimeuz == uz)
+        {
+                for(int i=0; i<uz; i++)
+            {
+                iter->next->tel[i] = yenitel[i];
+            }
+            return iter->next->tel;
+        }
+    }
+}
+
+
 void AraNumara(Bliste *ll)
 {
     int kontrol = 0;
@@ -306,12 +398,12 @@ void AraAd(Bliste *ll)
 }
 int main()
 {
-    Bliste *ll = NULL;
+   Bliste *ll = NULL;
 
     int menu;
 
 
-    printf("1)Ekle\n2)Listele\n3)Numaraya gore arama\n4)Isime gore arama\n5)Sil\n6)Cikis\n");
+    printf("1)Ekle\n2)Listele\n3)Numaraya gore arama\n4)Isime gore arama\n5)Sil\n6)Numara degistirme\n0)Cikis\n");
     printf("\n-----------------------------------\n");
 
     while(1 == 1)
@@ -336,6 +428,9 @@ int main()
             ll = Sil(ll);
             break;
         case 6:
+            ll = NumaraDegistirme(ll);
+            break;
+        case 0:
             exit(0);
         }
     }
