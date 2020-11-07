@@ -124,7 +124,7 @@ Bliste *NumaraDegistirme(Bliste *ll)
                 iter->next->tel[i] = yenitel[i];
             }
 
-                return iter->next->tel;
+                return iter->next;
             }
 
 
@@ -149,7 +149,7 @@ Bliste *NumaraDegistirme(Bliste *ll)
             {
                 iter->next->tel[i] = yenitel[i];
             }
-            return iter->next->tel;
+            return iter->next;
         }
     }
 }
