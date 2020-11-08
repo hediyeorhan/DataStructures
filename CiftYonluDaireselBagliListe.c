@@ -88,6 +88,11 @@ Bliste *Sil(Bliste *root, int data)
     while(iter->data != data)
     {
         iter = iter->next;
+        if(iter == root)
+        {
+            printf("\nSilinecek deger mecvut degil.\n");
+            return 0;
+        }
     }
     iter->next->prev = iter->prev;
     iter->prev->next = iter->next;
