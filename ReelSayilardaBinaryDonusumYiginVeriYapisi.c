@@ -94,7 +94,6 @@ void Cevir(Yiginlar *yeni_yigin, double sayi)
     // Ondalikli Kisim
 
     printf(".");
-    int sonuc[10];
 
     while(i != hassasiyet)
     {
@@ -107,8 +106,7 @@ void Cevir(Yiginlar *yeni_yigin, double sayi)
 
         }
 
-        sonuc[k] = tamkisim;
-        printf("%d ", sonuc[k]);
+        printf("%d ", tamkisim);
         i++;
         k++;
     }
