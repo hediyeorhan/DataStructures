@@ -85,7 +85,7 @@ int find_row(char *str)
         row = table.rows[hash_index].pNext;
         while(row)
         {
-            if(strcmp(row->name, str))    // if(!strcmp(row->name, str)) -- Ciktida bir degisiklik olmadi  ben de unlemi kaldirdim.
+            if(strcmp(row->name, str))   
                 return row->index;
             row = row->pNext;
         }
