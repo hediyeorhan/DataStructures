@@ -101,14 +101,6 @@ void ilerigeri()
 
 int main()
 {
-    /*
-    push("instagram.com");
-    push("twitter.com");
-    push("github.com");
-    push("hediyeorhan.com");
-    push("google.com");
-    push("youtube.com");
-    */
     char data[10];
 
     int menu;
