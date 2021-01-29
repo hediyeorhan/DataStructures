@@ -218,8 +218,8 @@ int AgacinYuksekligi(Agaclar *agackok)
     {
 
         sol = AgacinYuksekligi(agackok->sol);
-        //printf("Eleman : %d - Yuksekligi : %d\n", agackok->eleman, sol);
         sag = AgacinYuksekligi(agackok->sag);
+         
         printf("Eleman : %d - Yuksekligi : %d\n", agackok->eleman, sol);
         printf("Eleman : %d - Yuksekligi : %d\n", agackok->eleman, sag);
         if(sol > sag)
