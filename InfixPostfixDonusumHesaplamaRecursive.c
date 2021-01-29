@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #define N 100
 
-// HEDIYE ORHAN - 18010011087
 
 typedef struct node
 {
