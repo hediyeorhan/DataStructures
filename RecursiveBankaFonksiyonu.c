@@ -22,7 +22,7 @@ int main()
 {
     double anapara = 35.000;
     double bas_faiz_orani = 0.15; // yuzde cinsinden yazdim.
-    int ay = 5; // Para bankada 5 ay kalmıs.
+    int ay = 5; // Para bankada 5 ay kalmis.
     Banka(anapara, bas_faiz_orani, ay);
     return 0;
 }
