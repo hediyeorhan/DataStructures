@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// HEDIYE ORHAN - 18010011087
-
 
 typedef struct node
 {
